@@ -50,13 +50,14 @@ main .calculadora{
     flex-direction: column;
     padding: 1rem;
     box-sizing: border-box;
+    
 }
 
 main .calculadora .pantallas{
     width: 100%;
     height: 25%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
@@ -66,7 +67,7 @@ main .calculadora .pantallas .pantalla_operacion{
     height: 50%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     color: var(--color-font);
     font-size: var(--font-size-lg);
     font-family: var(--font-family-montserrat);
@@ -77,7 +78,7 @@ main .calculadora .pantallas .pantalla_resultado{
     height: 50%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     color: var(--color-font);
     font-size: var(--font-size-lg);
     font-family: var(--font-family-montserrat);
@@ -117,29 +118,73 @@ main .calculadora .buttons .cero{
 }
 
 
-main .record{
+.record {
     width: 20%;
     height: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 1rem;
     box-sizing: border-box;
-    word-break: break-word;
-    overflow: hidden; 
 }
 
-main .record span{
+.record .record_scroll {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+.record .record_scroll::-webkit-scrollbar {
+    width: 16px;
+    border-radius: 1rem;
+    background: var(--color-button);
+}
+
+.record .record_scroll::-webkit-scrollbar-thumb {
+    width: 8px;
+    border-radius: 1rem;
+    background-color: var(--color-font);
+
+}
+
+
+.record .record_scroll span {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    display: block;
     color: var(--color-font);
     font-size: var(--font-size-md);
     font-family: var(--font-family-montserrat);
     word-break: break-word;
-    overflow: hidden; 
+}
+
+.record .record_delete{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+.record .record_delete button{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+}
+
+.record .record_delete button img{
+    width: 1.5rem;
+    height: 1.5rem;
+    
 }
