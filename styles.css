@@ -245,7 +245,7 @@ main .record {
         justify-content: flex-end;
         align-items: flex-start;
         
-        padding: 1rem;
+        padding: 1rem 1rem 0 1rem;
         box-sizing: border-box;
     }
 
@@ -258,8 +258,8 @@ main .record {
     }
 
     header nav ul{
-        width: 2rem;
-        height: 2rem;
+        width: 10%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -269,8 +269,8 @@ main .record {
     }
 
     header nav ul button{
-        width: 2rem;
-        height: 2rem;
+        width: 100%;
+        height: 100%;
         justify-content: center;
         align-items: center;
         background-color: transparent;
@@ -278,8 +278,8 @@ main .record {
     }
 
     header nav ul button img{
-        width: 2rem;
-        height: 2rem;
+        width: 100%;
+        height: auto;
     }
 
 
@@ -304,7 +304,7 @@ main .record {
 
     main .calculadora .pantallas {
         width: 100%;
-        height: 25%;
+        height: 30%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -335,7 +335,7 @@ main .record {
 
     main .calculadora .buttons {
         width: 100%;
-        height: 75%;
+        height: 70%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, 1fr);
@@ -375,6 +375,7 @@ main .record {
         align-items: center;
         flex-direction: column;
         position: fixed;
+        background-color: var(--color-button);
         padding: 1rem;
         box-sizing: border-box;
     }
