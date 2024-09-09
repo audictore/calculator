@@ -8,13 +8,18 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
     <header>
-
+        <nav>
+            <ul>
+                <button id="button_menu">
+                    <img src="./assets/menu.png" alt="">
+                </button>
+            </ul>
+        </nav>
     </header>
+    
     <main>
         <div class="calculadora">
-
             <div class="pantallas">
                 <span class="pantalla_operacion" id="pantalla_operacion"></span>
                 <span class="pantalla_resultado" id="pantalla_resultado"></span>
@@ -40,18 +45,18 @@
                 <button class="button operator">.</button>
                 <button class="button operator">=</button>
             </div>
-
         </div>
 
-        <div class=record>
+        <div id="record" class="record">
             <div class="record_scroll">
                 <span id="operation_records_span"></span>
             </div>
             <div class="record_delete">
-                <button id="button_record_delete"><img src="./assets/trash.png" alt=""></button>
+                <button id="button_record_delete">
+                    <img src="./assets/trash.png" alt="">
+                </button>
             </div>
         </div>
-
     </main>
 
     <script src="./script.js"></script>

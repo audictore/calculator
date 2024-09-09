@@ -1,13 +1,19 @@
 let pantalla_operacion = document.getElementById("pantalla_operacion")
 let pantalla_resultado = document.getElementById("pantalla_resultado")
 let buttons = document.querySelectorAll(".button")
+
 let operation_records_span = document.getElementById("operation_records_span")
 let button_record_delete = document.getElementById("button_record_delete")
 
+let button_menu = document.getElementById("button_menu")
+let record = document.getElementById("record")
+
+//darle evento a todos los botones de la calculadora
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", manejar_click)
 }
 
+//logica de la calculadora
 function manejar_click(evento) {
     let button_clicked = evento.target
     let valor_button = button_clicked.textContent
@@ -74,7 +80,7 @@ function manejar_click(evento) {
 
 }
 
-
+//imprimir historial
 function operation_records(operacion_final, resultado_final) {
     let nueva_operacion = document.createElement("span")
 
@@ -83,9 +89,20 @@ function operation_records(operacion_final, resultado_final) {
 
 }
 
-
+//borrar historial
 button_record_delete.addEventListener("click", deleting_record)
 
 function deleting_record(){
     operation_records_span.innerHTML = ""
+}
+
+
+button_menu.addEventListener("click", spwan_record)
+
+function spwan_record(){
+    if (record.style.display === "none" || record.style.display === "") {
+        record.style.display = "flex"
+    } else {
+        record.style.display = "none";
+    }
 }
